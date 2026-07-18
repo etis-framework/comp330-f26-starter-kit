@@ -1,0 +1,8 @@
+evidence_type,display_name,artifacts,resolution_type,confidence,evidence_state,extrapolated
+architecture_overview,Architecture overview,docs/architecture/architecture.md,exact,0.98,Untouched starter evidence,False
+component_responsibilities,Component responsibilities,docs/architecture/component-responsibilities.md,exact,0.98,Untouched starter evidence,False
+api_contracts,Interfaces and API contracts,docs/architecture/api-contracts.md,exact,0.98,Untouched starter evidence,False
+data_context,Data and context design,,unresolved,0.0,Missing,False
+architecture_decisions,Architecture decisions,,unresolved,0.0,Missing,False
+architecture_review,Architecture review,docs/reviews/architecture-review.md,exact,0.98,Untouched starter evidence,False
+test_strategy,Test strategy,docs/testing/test-strategy.md,exact,0.98,Untouched starter evidence,False

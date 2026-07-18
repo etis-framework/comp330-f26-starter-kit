@@ -1,0 +1,11 @@
+priority,severity,category,title,explanation,evidence
+blocking,FAIL,Evidence coverage,Missing evidence: Cycle 1 release package,"No sufficiently credible exact, alias, or semantic evidence match was found.",
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Release notes,The resolved artifact is identical to the seeded starter material.,docs/release/release-notes.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Final test evidence,The resolved artifact is identical to the seeded starter material.,docs/testing/ci-evidence.md | test-evidence/README.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Known limitations,The resolved artifact is identical to the seeded starter material.,docs/release/known-limitations.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Defect control,The resolved artifact is identical to the seeded starter material.,docs/quality/defect-log.md | docs/quality/defect-review.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Initial operational evidence,The resolved artifact is identical to the seeded starter material.,docs/observability/metrics-notes.md | docs/observability/observability-plan.md | docs/observability/runtime-evidence.md
+informational,INFO,Evidence resolution,Extrapolated evidence mapping: Final test evidence,Matched an accepted alternative location.,docs/testing/ci-evidence.md | test-evidence/README.md
+significant,WARN,Team ownership,Team role ownership is unresolved,"No primary owner was resolved for: Team Lead, Planning & Process Lead, Architecture & Development Lead, Quality & Review Lead, Operations & Evidence Lead",docs/team/role-matrix.md | docs/team/roles.md
+informational,INFO,Review context,Filesystem-only review,"Git history, assignment tags, authorship, and GitHub workflow evidence were unavailable. File-based analysis continued.",/Users/williamoconnell/Desktop/COMP330 Book/Engineering_Trustworthy_Intelligent_Systems/comp330-f26-starter-kit
+informational,INFO,Review context,GitHub workflow analysis unavailable,"Pull requests, reviews, issues, CI runs, and releases require a GitHub source.",

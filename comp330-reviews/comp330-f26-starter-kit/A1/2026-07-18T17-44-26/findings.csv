@@ -1,0 +1,16 @@
+severity,category,title,explanation,evidence
+WARN,Evidence substance,Thin artifact: README.md,The artifact contains approximately 10 normalized words.,README.md
+FAIL,Starter customization,Unchanged starter artifact: README.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,README.md
+WARN,Evidence substance,Thin artifact: docs/team/team-charter.md,The artifact contains approximately 19 normalized words.,docs/team/team-charter.md
+FAIL,Starter customization,Unchanged starter artifact: docs/team/team-charter.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,docs/team/team-charter.md
+WARN,Evidence substance,Thin artifact: docs/team/roles.md,The artifact contains approximately 18 normalized words.,docs/team/roles.md
+FAIL,Starter customization,Unchanged starter artifact: docs/team/roles.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,docs/team/roles.md
+WARN,Evidence substance,Thin artifact: docs/team/working-agreements.md,The artifact contains approximately 19 normalized words.,docs/team/working-agreements.md
+FAIL,Starter customization,Unchanged starter artifact: docs/team/working-agreements.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,docs/team/working-agreements.md
+WARN,Evidence substance,Thin artifact: docs/ai/ai-policy.md,The artifact contains approximately 19 normalized words.,docs/ai/ai-policy.md
+FAIL,Starter customization,Unchanged starter artifact: docs/ai/ai-policy.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,docs/ai/ai-policy.md
+WARN,Evidence substance,Thin artifact: docs/ai/ai-use-log.md,The artifact contains approximately 20 normalized words.,docs/ai/ai-use-log.md
+FAIL,Starter customization,Unchanged starter artifact: docs/ai/ai-use-log.md,The file is byte-for-byte identical to the seeded COMP 330 starter file.,docs/ai/ai-use-log.md
+WARN,Repository organization,Expected evidence area not found: docs/decisions,No files were found under docs/decisions.,docs/decisions
+WARN,Baseline control,Assignment baseline fell back to HEAD,"Local folder is not initialized as a Git repository; file-based evidence analysis continued without Git history, tags, or a commit baseline.",not-available
+WARN,Team ownership,Role ownership could not be resolved,"The role matrix did not yield primary owners for: Team Lead, Planning & Process Lead, Architecture & Development Lead, Quality & Review Lead, Operations & Evidence Lead",docs/team/role-matrix.md

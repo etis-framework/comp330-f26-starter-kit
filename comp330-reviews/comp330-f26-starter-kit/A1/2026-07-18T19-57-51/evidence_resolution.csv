@@ -1,0 +1,7 @@
+evidence_type,display_name,artifacts,resolution_type,confidence,evidence_state,extrapolated
+project_identity,Project identity and repository orientation,README.md,exact,0.98,Untouched starter evidence,False
+team_charter,Team charter,docs/team/team-charter.md,exact,0.98,Untouched starter evidence,False
+role_ownership,Role ownership,docs/team/roles.md,alias,0.94,Untouched starter evidence,True
+working_agreements,Working agreements,docs/team/working-agreements.md,exact,0.98,Untouched starter evidence,False
+ai_policy,AI use policy,docs/ai/ai-policy.md,exact,0.98,Untouched starter evidence,False
+ai_use_log,AI use log,docs/ai/ai-use-log.md,exact,0.98,Untouched starter evidence,False

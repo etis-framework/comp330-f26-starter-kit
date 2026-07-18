@@ -1,0 +1,7 @@
+evidence_type,display_name,artifacts,resolution_type,confidence,evidence_state,extrapolated
+release_package,Cycle 1 release package,,unresolved,0.0,Missing,False
+release_notes,Release notes,docs/release/release-notes.md,exact,0.98,Untouched starter evidence,False
+test_evidence,Final test evidence,docs/testing/ci-evidence.md | test-evidence/README.md,alias,0.94,Untouched starter evidence,True
+known_limitations,Known limitations,docs/release/known-limitations.md,exact,0.98,Untouched starter evidence,False
+defect_control,Defect control,docs/quality/defect-log.md | docs/quality/defect-review.md,exact,0.98,Untouched starter evidence,False
+observability,Initial operational evidence,docs/observability/metrics-notes.md | docs/observability/observability-plan.md | docs/observability/runtime-evidence.md,exact,0.98,Untouched starter evidence,False

@@ -1,0 +1,11 @@
+priority,severity,category,title,explanation,evidence
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Architecture overview,The resolved artifact is identical to the seeded starter material.,docs/architecture/architecture.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Component responsibilities,The resolved artifact is identical to the seeded starter material.,docs/architecture/component-responsibilities.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Interfaces and API contracts,The resolved artifact is identical to the seeded starter material.,docs/architecture/api-contracts.md
+blocking,FAIL,Evidence coverage,Missing evidence: Data and context design,"No sufficiently credible exact, alias, or semantic evidence match was found.",
+blocking,FAIL,Evidence coverage,Missing evidence: Architecture decisions,"No sufficiently credible exact, alias, or semantic evidence match was found.",
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Architecture review,The resolved artifact is identical to the seeded starter material.,docs/reviews/architecture-review.md
+blocking,FAIL,Evidence authenticity,Untouched starter evidence: Test strategy,The resolved artifact is identical to the seeded starter material.,docs/testing/test-strategy.md
+significant,WARN,Team ownership,Team role ownership is unresolved,"No primary owner was resolved for: Team Lead, Planning & Process Lead, Architecture & Development Lead, Quality & Review Lead, Operations & Evidence Lead",docs/team/role-matrix.md | docs/team/roles.md
+informational,INFO,Review context,Filesystem-only review,"Git history, assignment tags, authorship, and GitHub workflow evidence were unavailable. File-based analysis continued.",/Users/williamoconnell/Desktop/COMP330 Book/Engineering_Trustworthy_Intelligent_Systems/comp330-f26-starter-kit
+informational,INFO,Review context,GitHub workflow analysis unavailable,"Pull requests, reviews, issues, CI runs, and releases require a GitHub source.",

@@ -1,0 +1,7 @@
+evidence_type,display_name,artifacts,resolution_type,confidence,evidence_state,extrapolated
+scope,Scope and boundaries,docs/planning/scope.md,exact,0.98,Untouched starter evidence,False
+traceability,Requirements traceability,docs/planning/traceability.md,exact,0.98,Untouched starter evidence,False
+task_plan,Task plan and ownership,docs/planning/task-plan.md,exact,0.98,Untouched starter evidence,False
+estimation,Estimates and assumptions,docs/planning/estimates.md,exact,0.98,Untouched starter evidence,False
+risk_register,Risk register,docs/planning/risk-register.md,exact,0.98,Untouched starter evidence,False
+schedule,Schedule and milestones,docs/planning/schedule.md,exact,0.98,Untouched starter evidence,False

@@ -1,0 +1,5 @@
+priority,severity,category,title,explanation,evidence
+blocking,FAIL,Submission readiness,Required assignment evidence remains untouched starter content,6 resolved assignment artifacts remain identical to seeded templates. The repository does not yet contain assessable student work.,README.md | docs/ai/ai-policy.md | docs/ai/ai-use-log.md | docs/team/roles.md | docs/team/team-charter.md | docs/team/working-agreements.md
+informational,INFO,Evidence resolution,Extrapolated evidence mapping: Role ownership,Matched an accepted alternative location.,docs/team/roles.md
+blocking,FAIL,Team ownership,Team role ownership is unresolved,"No primary owner was resolved for: Team Lead, Planning & Process Lead, Architecture & Development Lead, Quality & Review Lead, Operations & Evidence Lead",docs/team/role-matrix.md | docs/team/roles.md
+informational,INFO,Review context,Filesystem-only review,"Git history, assignment tags, authorship, and GitHub workflow evidence were unavailable. File-based analysis continued.",/Users/williamoconnell/Desktop/COMP330 Book/Engineering_Trustworthy_Intelligent_Systems/comp330-f26-starter-kit
