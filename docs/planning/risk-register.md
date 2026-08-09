@@ -2,7 +2,11 @@
 
 ## Purpose
 
-Document engineering evidence for this area.
+Track meaningful project risks, ownership, mitigation actions, and current status.
+
+| ID | Risk | Likelihood | Impact | Mitigation | Owner | Status |
+|---|---|---|---|---|---|---|
+| R-001 |  |  |  |  |  |  |
 
 ## Expectations
 

@@ -1,9 +1,15 @@
-name: CI
-on: [push, pull_request]
+name: CI - Not Yet Configured
+
+on:
+  workflow_dispatch:
+
 jobs:
-  build:
+  not-configured:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Placeholder CI Step
-        run: echo "Configure project CI here"
+      - name: CI configuration required
+        run: |
+          echo "::error::Project CI has not yet been configured."
+          echo "Replace this starter workflow with project-specific build and test checks before using CI as engineering evidence."
+          exit 1
