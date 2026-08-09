@@ -1,8 +1,8 @@
-# Ai Use Log
+# AI Use Log
 
-## Purpose
-
-Document engineering evidence for this area.
+| Date | Tool | Purpose | Artifact / Activity | Human Verification | Result / Action |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
 
 ## Expectations
 

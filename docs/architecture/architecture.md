@@ -1,8 +1,18 @@
 # Architecture
 
-## Purpose
+## System Context
 
-Document engineering evidence for this area.
+## Architectural Structure
+
+## Major Components and Responsibilities
+
+## Interfaces and Dependencies
+
+## Constraints and Assumptions
+
+## Architecture Diagram
+
+## Key Architectural Decisions
 
 ## Expectations
 

@@ -1,8 +1,0 @@
-evidence_type,display_name,artifacts,resolution_type,confidence,evidence_state,extrapolated
-final_release_package,Final release package,,unresolved,0.0,Missing,False
-final_release_notes,Final release notes,,unresolved,0.0,Missing,False
-operational_runbook,Operational runbook,docs/operations/runbook.md,exact,0.98,Untouched starter evidence,False
-observability,Observability plan,docs/observability/observability-plan.md,exact,0.98,Untouched starter evidence,False
-security_governance,Security governance,docs/security/security-governance-checklist.md,exact,0.98,Untouched starter evidence,False
-postmortem_learning,Postmortem and cycle learning,docs/operations/postmortem-template.md,exact,0.98,Untouched starter evidence,False
-test_evidence,Final test evidence,test-evidence/README.md,alias,0.94,Untouched starter evidence,True
