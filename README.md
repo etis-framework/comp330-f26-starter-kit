@@ -1,6 +1,8 @@
 # COMP 330/474 — Fall 2026 Repository Starter Kit
 
-Official course-specific repository starter kit for **COMP 330/474 Software Engineering** at Loyola University Chicago.
+Official course-specific repository starter kit for COMP 330/474 Software Engineering at Loyola University Chicago.
+
+This course starter kit is distinct from the general ETIS Engineering Platform Starter Kit; it is specifically designed to establish the team repository used for COMP 330/474 course work.
 
 This repository establishes the engineering workspace and evidence structure your team will use throughout the semester.
 
