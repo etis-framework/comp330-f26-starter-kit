@@ -28,12 +28,20 @@ Use component names consistent with:
 /docs/architecture/architecture.md
 /docs/architecture/component-responsibilities.md
 
-Remove instructional comments like this one as you complete the artifact.
+IMPORTANT:
+
+- Text inside HTML comments like this is Starter Kit guidance.
+- Delete instructional comments before the applicable phase-gate submission.
+- Sample contracts and sample data must be replaced with your team's actual
+  interface contracts.
+- Do not simply rename the example endpoints or fields.
 -->
 
 ## Contract Summary
 
 <!--
+TEAM CONTENT REQUIRED
+
 Use unique identifiers in the form:
 
 API-###
@@ -45,7 +53,7 @@ API-002
 API-003
 
 The API prefix may be used for significant interface contracts even when the
-underlying interaction is not HTTP.
+interaction is not HTTP.
 
 If your team adopts another consistent identifier convention, document it and
 use it throughout the repository.
@@ -59,6 +67,9 @@ Recommended status values:
 - Changed
 - Deprecated
 - Removed
+
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM WITH ACTUAL PROJECT CONTRACTS.
 -->
 
 | ID | Consumer | Provider | Purpose | Interface / Protocol | Related Requirements | Status |
@@ -68,15 +79,17 @@ Recommended status values:
 | API-003 | Application Service | Identity Provider | Obtain trusted authenticated identity | Provider-defined authentication protocol | REQ-001 | Proposed |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with actual project contracts.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 -->
 
 ## Detailed Contracts
 
 <!--
-Use a detailed subsection for each significant contract.
+TEAM CONTENT REQUIRED FOR SIGNIFICANT CONTRACTS
 
-Copy and adapt the following structure as needed:
+Use a detailed subsection for each important interface contract.
+
+Suggested structure:
 
 ### API-### — Contract Name
 
@@ -90,35 +103,44 @@ Copy and adapt the following structure as needed:
 
 Describe the interaction and its direction.
 
-For HTTP, include method and path when known.
+For HTTP:
+- include method and path when known.
 
-For an event, identify producer, consumer, and event.
+For events:
+- identify producer, consumer, and event.
 
-For an internal interface, identify the architectural boundary.
+For internal interfaces:
+- identify the architectural boundary.
 
 #### Request / Input
 
-Describe the meaningful input contract.
+Describe meaningful input.
 
 Use a table, schema, example, or link to authoritative schema evidence.
 
 #### Response / Output
 
-Describe the expected output.
+Describe expected output.
 
 #### Failure Behavior
 
-Describe meaningful failure conditions and how they are represented.
+Describe important failure conditions and how they are represented.
 
 #### Authentication / Authorization
 
-Describe security expectations relevant to this interface.
+Describe security expectations relevant to the interaction.
 
 #### Contract Rules
 
-Describe invariants, preconditions, postconditions, idempotency expectations,
-ordering requirements, transaction expectations, or other behavior that both
-sides must understand.
+Describe important:
+
+- invariants;
+- preconditions;
+- postconditions;
+- idempotency expectations;
+- ordering requirements;
+- transaction expectations; or
+- other behavior both sides must understand.
 
 #### Verification
 
@@ -127,15 +149,17 @@ conforms to the contract.
 
 #### Notes / Open Questions
 
-Reference unresolved questions rather than inventing missing contract details.
+Reference unresolved questions instead of inventing missing contract details.
 
-Delete this instructional comment before submission.
+The contracts below are WORKED EXAMPLES ONLY.
+
+DELETE AND REPLACE THEM WITH YOUR ACTUAL PROJECT CONTRACTS.
 -->
 
 ### API-001 — Submit Workflow Request
 
 <!--
-SAMPLE CONTRACT — DELETE OR REPLACE BEFORE SUBMISSION
+SAMPLE CONTRACT — DELETE AND REPLACE BEFORE SUBMISSION
 -->
 
 **Consumer:** Web Client  
@@ -158,10 +182,11 @@ The Web Client sends an authenticated request to create a workflow request.
 | `description` | Yes | User-provided information required to process the request. |
 
 <!--
-The fields above are SAMPLE DATA.
+THE FIELDS ABOVE ARE SAMPLE DATA.
 
-Replace them with your actual interface contract. Do not infer fields simply
-because they appear in this example.
+DELETE AND REPLACE THEM WITH YOUR ACTUAL CONTRACT.
+
+Do not infer project fields merely because they appear in this example.
 -->
 
 #### Response / Output
@@ -170,11 +195,10 @@ On successful creation, the service returns a representation containing the
 new request identifier and current workflow status.
 
 <!--
-If your interface uses explicit HTTP status codes, schemas, or response
-examples, document them once they are known.
+As the contract matures, document protocol details such as response structures
+or status codes when they are actually known.
 
-Do not invent protocol detail during an early phase simply to make the
-contract appear complete.
+Do not invent protocol detail simply to make an early artifact look complete.
 -->
 
 #### Failure Behavior
@@ -201,15 +225,15 @@ decisions.
 `AC-REQ-001-01`, `AC-REQ-001-02`
 
 <!--
-Replace the references above with actual verification evidence as the
-implementation matures.
+THE REFERENCES ABOVE ARE SAMPLE DATA.
 
-Possible later evidence:
+Replace them with actual verification evidence.
 
-- acceptance criteria;
+As implementation matures, verification may also reference:
+
 - integration tests;
 - contract tests;
-- end-to-end tests;
+- end-to-end tests; or
 - other repository-visible evidence.
 -->
 
@@ -222,7 +246,7 @@ None currently documented.
 ### API-002 — Retrieve Workflow Status
 
 <!--
-SAMPLE CONTRACT — DELETE OR REPLACE BEFORE SUBMISSION
+SAMPLE CONTRACT — DELETE AND REPLACE BEFORE SUBMISSION
 -->
 
 **Consumer:** Web Client  
@@ -262,7 +286,7 @@ request.
 #### Contract Rules
 
 - A caller must not receive protected request information solely because they know a request identifier.
-- Returned status must represent the authoritative application state.
+- Returned status must represent authoritative application state.
 
 #### Verification
 
@@ -273,15 +297,18 @@ request.
 None currently documented.
 
 <!--
-DELETE ALL SAMPLE CONTRACTS ABOVE after replacing them with your actual
-project contracts.
+DELETE AND REPLACE ALL SAMPLE CONTRACTS ABOVE.
 
-The examples demonstrate structure, not required system behavior.
+The examples demonstrate the expected structure and level of reasoning.
+
+They do NOT define required behavior for your project.
 -->
 
 ## Data Contract Guidance
 
 <!--
+STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
+
 Where an interface exchanges structured data, document the contract at an
 appropriate level of precision.
 
@@ -292,30 +319,32 @@ Possible approaches include:
 - JSON Schema;
 - OpenAPI;
 - protocol definitions;
-- typed interfaces;
+- typed interfaces; or
 - another repository-visible schema.
 
-Avoid maintaining several independent descriptions of the same contract.
+Avoid maintaining several independent definitions of the same contract.
 
 If OpenAPI or another machine-readable artifact becomes authoritative, this
-file may summarize the contract and link to that source rather than duplicate
-every field.
+file may summarize the architectural contract and link to that source instead
+of duplicating every field.
 
 Example:
 
 Authoritative schema:
 /openapi/openapi.yaml
 
-This file:
-Architectural summary and links to the authoritative schema.
+Architecture evidence:
+This file summarizes the interface and links to the authoritative schema.
 -->
 
 ## Failure Contracts
 
 <!--
-Failure behavior is part of the interface contract.
+STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
 
-Do not define only the happy path.
+Failure behavior is part of an interface contract.
+
+Do not define only the successful path.
 
 Consider relevant conditions such as:
 
@@ -328,22 +357,21 @@ Consider relevant conditions such as:
 - dependency failures;
 - timeout;
 - concurrency conflicts;
-- unavailable services;
+- unavailable services; or
 - partial completion.
 
 Not every contract needs every failure condition.
 
-Document failures that consumers must understand or that materially affect
+Document failures consumers need to understand or that materially affect
 system behavior.
 -->
 
 ## Security Boundaries
 
 <!--
-For contracts crossing trust boundaries, document relevant security
-expectations.
+STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
 
-Consider:
+For contracts crossing trust boundaries, consider:
 
 - authentication;
 - authorization;
@@ -351,20 +379,23 @@ Consider:
 - integrity;
 - input validation;
 - secret handling;
-- sensitive data exposure;
+- sensitive-data exposure;
 - least privilege;
-- replay or duplicate-operation concerns.
+- replay behavior; and
+- duplicate-operation concerns.
 
 Do not rely on a user interface to enforce an authoritative security rule.
 
-Reference security decisions or requirements rather than duplicating them when
-appropriate.
+Reference authoritative security requirements or decisions rather than
+unnecessarily duplicating them.
 -->
 
 ## Contract Compatibility and Change
 
 <!--
-An interface change can affect multiple components.
+STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
+
+An interface change may affect multiple components.
 
 Before materially changing an accepted contract:
 
@@ -378,6 +409,8 @@ Before materially changing an accepted contract:
 
 Do not silently change one side of a contract while leaving the other side
 documented against an older interface.
+
+The blank table below is intentional at project start.
 -->
 
 | Effective Gate | Contract | Change | Compatibility Impact | Related Evidence |
@@ -387,10 +420,11 @@ documented against an older interface.
 ## Verification and Traceability
 
 <!--
-Important contracts should become traceable to implementation and
-verification evidence.
+STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
 
-A useful chain may look like:
+Important contracts should become traceable to implementation and verification.
+
+A useful evidence chain may look like:
 
 REQ-001
   ->
@@ -402,7 +436,7 @@ Provider implementation
   ->
 Consumer implementation
   ->
-Contract / integration test
+Contract or integration test
 
 The exact chain will evolve as the project matures.
 
@@ -424,15 +458,18 @@ Do not claim that a contract is Verified until appropriate evidence exists.
 - Record unresolved behavior explicitly rather than inventing contract details.
 
 <!--
-Before the applicable phase-gate submission:
+FINAL STARTER KIT CHECK — DELETE BEFORE PHASE-GATE SUBMISSION
 
-1. Delete all sample contracts and sample data.
+Before submission:
+
+1. Delete and replace all sample contracts and sample data.
 2. Confirm every retained contract represents an actual architectural interface.
 3. Confirm consumer and provider names agree with component-responsibilities.md.
-4. Confirm requirement and acceptance-criteria references are valid.
-5. Confirm documented interfaces match the current implementation where implementation exists.
-6. Confirm important failure and security behaviors are represented.
-7. Remove instructional HTML comments.
+4. Confirm component names agree with architecture.md.
+5. Confirm requirement and acceptance-criteria references are valid.
+6. Confirm documented interfaces match the current implementation where implementation exists.
+7. Confirm important failure and security behavior is represented.
+8. Remove all instructional HTML comments.
 
 A reviewer should be able to understand what each side of an important
 architectural boundary is entitled to expect from the other.
