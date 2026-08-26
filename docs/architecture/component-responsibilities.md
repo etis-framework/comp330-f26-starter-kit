@@ -6,71 +6,89 @@ STARTER KIT GUIDANCE — DELETE BEFORE PHASE-GATE SUBMISSION
 This file defines the responsibilities and boundaries of the system's major
 architectural components.
 
-The goal is to make clear:
+It should make clear:
 
 - what each component owns;
-- what each component does;
+- what each component is responsible for;
 - what each component explicitly does NOT own;
-- what it depends on;
-- what depends on it; and
-- where important responsibility boundaries exist.
+- what each component depends on;
+- what depends on each component; and
+- where important architectural responsibility boundaries exist.
 
-This is not a class list, package inventory, or source-code directory listing.
+This is NOT a source-code directory, package inventory, class list, or list
+of every technical dependency.
 
 Use the same component names used in:
 
 /docs/architecture/architecture.md
 
-Remove instructional comments like this one as you complete the artifact.
+IMPORTANT:
+
+- Text inside HTML comments like this is Starter Kit guidance.
+- Delete instructional comments before the applicable phase-gate submission.
+- Sample rows and sample component descriptions must be replaced with your
+  team's actual architecture.
+- Do not simply rename the sample components and retain the example design.
 -->
 
 ## Component Responsibility Matrix
 
 <!--
-Replace the sample rows below with your actual major components.
+TEAM CONTENT REQUIRED
 
-Component:
+Replace the sample rows below with your team's actual major components.
+
+COLUMN GUIDANCE
+
+Component
 Use the authoritative architectural component name.
 
-Primary Responsibilities:
+Primary Responsibilities
 Describe what the component is accountable for.
 
-Does Not Own:
-Explicitly identify responsibilities that might otherwise be ambiguous.
+Does Not Own
+Explicitly identify responsibilities that could otherwise become ambiguous.
 This helps prevent responsibility leakage and architectural drift.
 
-Depends On:
-Identify important architectural dependencies.
+Depends On
+Identify significant architectural dependencies.
 
-Used By:
-Identify important consumers.
+Used By
+Identify significant consumers.
 
-Related Requirements:
-Reference requirements materially served or constrained by the component.
+Related Requirements
+Reference requirements materially implemented, constrained, or supported by
+the component.
+
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM.
 -->
 
 | Component | Primary Responsibilities | Does Not Own | Depends On | Used By | Related Requirements |
 |---|---|---|---|---|---|
-| Web Client | Present workflow information, collect user input, initiate authorized application actions | Business workflow rules, durable data storage, authentication authority | Application Service | End Users | REQ-001, REQ-002 |
-| Application Service | Enforce workflow behavior, coordinate domain operations, apply authorization decisions | User-interface rendering, identity-provider internals, database implementation details | Identity Provider, Persistence Layer | Web Client | REQ-001, REQ-002 |
+| Web Client | Present workflow information, collect user input, and initiate application actions | Authoritative workflow rules, durable data storage, authentication authority | Application Service | End Users | REQ-001, REQ-002 |
+| Application Service | Enforce workflow behavior, coordinate domain operations, and make application-level authorization decisions | User-interface rendering, identity-provider internals, physical database implementation | Identity Provider, Persistence Layer | Web Client | REQ-001, REQ-002 |
 | Persistence Layer | Provide controlled durable storage and retrieval of application state | Workflow policy, presentation logic, user authentication | Database | Application Service | REQ-001, REQ-002 |
 | Identity Provider | Establish authenticated user identity | Application workflow authorization and business rules | External identity infrastructure | Application Service | REQ-001 |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with actual project components.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 
-Do not create a component simply because a folder exists in the repository.
-Include components that represent meaningful engineering responsibilities or
-boundaries.
+Do not create a component merely because a repository folder or package exists.
+
+A component should represent a meaningful architectural responsibility or
+boundary.
 -->
 
 ## Detailed Component Responsibilities
 
 <!--
-Use one subsection for each major component when the responsibility matrix
-alone is insufficient.
+TEAM CONTENT REQUIRED WHERE ADDITIONAL DETAIL IS USEFUL
 
-Copy and adapt the following structure as needed:
+Use one subsection for each major component when the responsibility matrix
+alone is not sufficient.
+
+Suggested structure:
 
 ### Component Name
 
@@ -80,15 +98,15 @@ Describe why the component exists.
 
 **Owns**
 
-- Responsibility or state owned by this component.
+- Important responsibility or state owned by this component.
 
 **Does Not Own**
 
-- Responsibility intentionally assigned elsewhere.
+- Related responsibility intentionally assigned elsewhere.
 
 **Inputs**
 
-- Important information, commands, events, or requests received.
+- Important commands, events, requests, or data received.
 
 **Outputs**
 
@@ -100,8 +118,12 @@ Describe why the component exists.
 
 **Failure Responsibilities**
 
-Describe what the component is expected to do when a dependency fails,
-input is invalid, or the component cannot complete its responsibility.
+Describe what the component is responsible for when:
+
+- input is invalid;
+- a dependency fails;
+- an operation cannot be completed; or
+- another meaningful failure occurs.
 
 **Related Evidence**
 
@@ -111,13 +133,15 @@ input is invalid, or the component cannot complete its responsibility.
 - Decisions:
 - Tests:
 
-Delete this instructional comment before submission.
+The two sections below are WORKED EXAMPLES ONLY.
+
+DELETE AND REPLACE THEM WITH ACTUAL COMPONENT DESCRIPTIONS.
 -->
 
 ### Web Client
 
 <!--
-SAMPLE COMPONENT — DELETE OR REPLACE BEFORE SUBMISSION
+SAMPLE COMPONENT — DELETE AND REPLACE BEFORE SUBMISSION
 -->
 
 **Purpose**
@@ -136,7 +160,7 @@ Provide the interactive interface through which users access workflow capabiliti
 - authoritative workflow rules;
 - durable workflow state;
 - authentication authority; or
-- database access.
+- direct database access.
 
 **Inputs**
 
@@ -156,7 +180,7 @@ Provide the interactive interface through which users access workflow capabiliti
 **Failure Responsibilities**
 
 The client should present application or connectivity failures without
-manufacturing successful state or silently losing user-visible errors.
+manufacturing successful state or silently hiding relevant failures.
 
 **Related Evidence**
 
@@ -166,7 +190,7 @@ manufacturing successful state or silently losing user-visible errors.
 ### Application Service
 
 <!--
-SAMPLE COMPONENT — DELETE OR REPLACE BEFORE SUBMISSION
+SAMPLE COMPONENT — DELETE AND REPLACE BEFORE SUBMISSION
 -->
 
 **Purpose**
@@ -177,7 +201,7 @@ Coordinate application behavior and enforce workflow-level rules.
 
 - workflow orchestration;
 - application-level validation;
-- authorization decisions based on trusted identity;
+- application authorization decisions based on trusted identity;
 - coordination of persistence operations; and
 - application-level error handling.
 
@@ -213,65 +237,75 @@ a successful state change when the required operation was not completed.
 - API / Interface Contracts: `API-001`, `API-002`
 
 <!--
-DELETE THE SAMPLE COMPONENT SECTIONS ABOVE after creating actual component
-descriptions.
+DELETE AND REPLACE THE SAMPLE COMPONENT SECTIONS ABOVE.
 
-You do not need a detailed subsection for every component if the matrix is
-sufficient. Use additional detail where boundaries, failure responsibilities,
-or ownership would otherwise remain unclear.
+You do not need a lengthy detailed subsection for every component if the
+responsibility matrix already makes the boundary clear.
+
+Use additional detail where ownership, failure behavior, or architectural
+boundaries would otherwise remain ambiguous.
 -->
 
 ## Responsibility Boundaries
 
 <!--
-Document boundaries where confusion could create defects or architectural drift.
+TEAM CONTENT REQUIRED FOR IMPORTANT OR EASILY CONFUSED BOUNDARIES
 
-Questions worth considering:
+Document boundaries where ambiguity could create defects or architectural
+drift.
+
+Questions to consider where relevant:
 
 - Where is input validated?
-- Where are authorization decisions made?
+- Where are authoritative authorization decisions made?
 - Which component owns authoritative state?
-- Who may modify that state?
+- Which components may modify that state?
 - Where are business rules enforced?
 - Who handles retries or failures?
 - Who converts between internal and external representations?
 - Who owns audit or logging responsibilities?
-- Which component is responsible for transaction boundaries?
+- Where are transaction boundaries established?
 
-Do not answer questions that are irrelevant to your system.
+Do not answer irrelevant questions merely to fill the table.
 
-The goal is not to distribute every possible responsibility. The goal is to
-make IMPORTANT boundaries explicit.
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM.
 -->
 
 | Concern | Owning Component | Boundary / Rule |
 |---|---|---|
 | Workflow rule enforcement | Application Service | User-interface code may guide users but does not establish authoritative workflow validity. |
 | Persistent workflow state | Persistence Layer / Database | Application components access durable state through the persistence boundary. |
-| User authentication | Identity Provider | Application consumes trusted identity but does not manage user credentials. |
+| User authentication | Identity Provider | The application consumes trusted identity but does not manage user credentials. |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with actual project boundaries.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 -->
 
 ## Shared Responsibilities
 
 <!--
-Some engineering concerns legitimately span multiple components.
+Some concerns legitimately span multiple components.
 
-Examples:
+Examples may include:
 
-- observability;
 - security;
-- error handling;
+- observability;
 - validation;
+- error handling;
 - performance;
-- logging;
+- logging; or
 - traceability.
 
-Do not assign a cross-cutting concern vaguely to "everyone."
+Do not assign an important cross-cutting concern vaguely to "everyone."
 
-Identify how responsibility is divided.
+Describe how responsibility is divided.
+
+THE ROW BELOW IS SAMPLE DATA.
+DELETE AND REPLACE IT.
+
+If this section adds no meaningful information to your architecture, the team
+may remove it after making that decision.
 -->
 
 | Concern | Components | Responsibility Split |
@@ -279,8 +313,7 @@ Identify how responsibility is divided.
 | Security | Web Client, Application Service, Identity Provider | Identity Provider establishes identity; Application Service enforces authorization; Web Client presents permitted actions but is not the authoritative security boundary. |
 
 <!--
-DELETE THE SAMPLE ROW ABOVE and replace it with actual shared responsibilities,
-or remove this section if no cross-component responsibility needs clarification.
+DELETE AND REPLACE THE SAMPLE ROW ABOVE.
 -->
 
 ## Component Changes
@@ -288,17 +321,28 @@ or remove this section if no cross-component responsibility needs clarification.
 <!--
 Component boundaries may evolve.
 
-When a component is added, removed, split, merged, or given materially
-different responsibilities:
+When a component is:
 
-1. update this file;
-2. update architecture.md;
-3. update the architecture diagram;
-4. update affected API/interface contracts;
-5. record a decision when the change is architecturally significant; and
-6. review affected requirements, tests, risks, and operational evidence.
+- added;
+- removed;
+- split;
+- merged; or
+- given materially different responsibilities;
 
-Use the table below for significant changes when appropriate.
+review and update:
+
+1. this file;
+2. architecture.md;
+3. the architecture diagram;
+4. api-contracts.md;
+5. significant decision records;
+6. affected requirements and acceptance criteria;
+7. tests; and
+8. relevant risk or operational evidence.
+
+Use the table below for meaningful changes.
+
+A blank table is intentional at project start.
 -->
 
 | Effective Gate | Component | Change | Reason | Related Decision |
@@ -318,16 +362,20 @@ Use the table below for significant changes when appropriate.
 - Update component boundaries when the architecture changes.
 
 <!--
-Before the applicable phase-gate submission:
+FINAL STARTER KIT CHECK — DELETE BEFORE PHASE-GATE SUBMISSION
 
-1. Replace all sample component data.
+Before submission:
+
+1. Delete and replace all sample component data.
 2. Confirm every listed component exists in the current architecture.
-3. Confirm responsibilities agree with architecture.md.
-4. Confirm important component interactions agree with api-contracts.md.
-5. Review for overlapping, missing, or ambiguous responsibility ownership.
-6. Remove instructional HTML comments.
+3. Confirm component names agree with architecture.md.
+4. Confirm interactions agree with api-contracts.md.
+5. Review for missing, overlapping, or ambiguous responsibilities.
+6. Confirm referenced requirements and contracts exist.
+7. Remove all instructional HTML comments.
 
 A reviewer should be able to use this file to answer:
 
-"Which component is responsible for this behavior, state, or decision?"
+"Which component is responsible for this behavior, state, or architectural
+decision?"
 -->
