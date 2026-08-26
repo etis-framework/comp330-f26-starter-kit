@@ -1,10 +1,11 @@
-# COMP 330/474 Fall 2026 Starter Kit — Educational Use License
+COMP 330/474 Fall 2026 Starter Kit — Educational Use License
 
 Copyright © 2026 William T. O'Connell
 
 All Rights Reserved Except as Expressly Granted Below.
 
-## Purpose
+
+PURPOSE
 
 This repository is provided as the official starter repository for COMP 330/474
 Software Engineering coursework and related authorized educational use.
@@ -13,7 +14,8 @@ The repository contains instructional scaffolding, engineering templates,
 repository structures, examples, workflow configuration, documentation, and
 other materials intended to support student software-engineering projects.
 
-## Educational Use Permission
+
+EDUCATIONAL USE PERMISSION
 
 Permission is granted to students enrolled in an authorized course using this
 starter kit to:
@@ -34,7 +36,8 @@ reviewers, and educational institutions using this starter kit to reproduce
 and adapt the starter materials as reasonably necessary for course delivery,
 instruction, assessment, and review.
 
-## Student and Team Contributions
+
+STUDENT AND TEAM CONTRIBUTIONS
 
 This license applies to the original starter-kit materials distributed as part
 of the official COMP 330/474 starter repository.
@@ -51,7 +54,8 @@ for student-created project code. Teams are responsible for determining and
 documenting an appropriate license before distributing their own software
 outside the course when such distribution is intended.
 
-## Restrictions
+
+RESTRICTIONS
 
 Except for the educational uses expressly permitted above, permission is not
 granted to:
@@ -66,7 +70,8 @@ granted to:
 - use the ETIS name, marks, logos, or project identity in a manner that implies
   endorsement, certification, sponsorship, or affiliation.
 
-## Relationship to ETIS Materials
+
+RELATIONSHIP TO ETIS MATERIALS
 
 This repository may reference, link to, or contain limited materials associated
 with Engineering Trustworthy Intelligent Systems (ETIS).
@@ -80,7 +85,8 @@ for such use.
 ETIS materials remain subject to the license applicable to the corresponding
 ETIS repository, publication, or resource.
 
-## Third-Party Materials
+
+THIRD-PARTY MATERIALS
 
 Third-party software, libraries, tools, examples, or other materials included
 in or used by projects based on this repository remain subject to their
@@ -88,13 +94,15 @@ respective licenses and terms.
 
 This license does not alter or supersede any third-party license.
 
-## No Endorsement
+
+NO ENDORSEMENT
 
 Use of this starter kit or ETIS engineering practices does not imply that a
 student project, team, institution, product, or system is certified, approved,
 endorsed, or sponsored by ETIS or by the copyright holder.
 
-## No Warranty
+
+NO WARRANTY
 
 THE STARTER KIT AND ASSOCIATED MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY
 OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
@@ -104,7 +112,8 @@ CORRECTNESS, SECURITY, OR SUITABILITY FOR ANY PARTICULAR USE.
 Users remain responsible for evaluating their own software, engineering
 decisions, security controls, legal obligations, and project outcomes.
 
-## Permissions
+
+PERMISSIONS
 
 Uses beyond the permissions granted above require prior written authorization
 from the copyright holder.
