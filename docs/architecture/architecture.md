@@ -21,42 +21,50 @@ incomplete. State uncertainty explicitly rather than inventing detail.
 Do not use this file as a source-code inventory. Focus on meaningful
 architectural structure and engineering reasoning.
 
-Remove instructional comments like this one as you complete the artifact.
+IMPORTANT:
+
+- Text inside HTML comments like this is Starter Kit guidance.
+- Delete instructional comments before the applicable phase-gate submission.
+- Sample tables and examples are provided only to demonstrate structure.
+- Replace all sample project data with your team's actual engineering evidence.
+- Do not simply rename the sample components and treat the example as your architecture.
 -->
 
 ## System Context
 
 <!--
+TEAM CONTENT REQUIRED
+
 Describe the system from the outside looking in.
 
-Identify:
+Identify, where relevant:
 
 - primary users or actors;
 - external systems or services;
 - important data sources or destinations;
-- trust or organizational boundaries when relevant; and
+- trust or organizational boundaries; and
 - what is inside versus outside the system being engineered.
 
 Keep this at the SYSTEM level. Detailed component interactions belong later.
 
-Example only — replace with your actual context:
+EXAMPLE ONLY — DELETE AND REPLACE:
 
 "The Workflow System allows students to submit requests and authorized staff
 to review and process them. Users access the system through a web application.
 The system relies on an external identity provider for authentication and a
 database for persistent workflow records."
 
-Delete this instructional comment before submission.
+Replace this entire comment with your team's actual system-context description.
 -->
-
-Describe the system context here.
 
 ## Architectural Structure
 
 <!--
+TEAM CONTENT REQUIRED
+
 Describe the overall architectural approach.
 
-Examples might include:
+Possible structures might include:
 
 - layered application;
 - client/server;
@@ -79,25 +87,35 @@ Consider:
 - deployment boundaries; and
 - major architectural patterns.
 
-If the architecture is still provisional, say so.
--->
+If the architecture is still provisional, state that explicitly.
 
-Describe the current architectural structure here.
+Replace this entire comment with your team's actual architectural description.
+-->
 
 ## Major Components and Responsibilities
 
 <!--
+TEAM CONTENT REQUIRED
+
 Summarize the major architectural components.
 
-Keep this table at a high level. Detailed boundaries and responsibilities
+Keep this table at a high level. More detailed responsibility boundaries
 belong in:
 
 /docs/architecture/component-responsibilities.md
 
-Use stable component names consistently across architecture documents,
-diagrams, decisions, implementation, and verification.
+Use stable component names consistently across:
 
-Replace the sample rows below with your actual architectural components.
+- architecture.md;
+- component-responsibilities.md;
+- api-contracts.md;
+- architecture diagrams;
+- decision records;
+- implementation; and
+- verification evidence.
+
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM WITH YOUR ACTUAL COMPONENTS.
 -->
 
 | Component | Primary Responsibility | Key Dependencies |
@@ -108,16 +126,19 @@ Replace the sample rows below with your actual architectural components.
 | Identity Provider | Authenticates users and provides trusted identity information. | External service |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with your actual major
-architectural components.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 
-Do not list every class, file, package, or library. A component should
-represent a meaningful architectural responsibility or boundary.
+Do not list every class, file, package, or library.
+
+A component should represent a meaningful architectural responsibility or
+boundary.
 -->
 
 ## Interfaces and Dependencies
 
 <!--
+TEAM CONTENT REQUIRED
+
 Describe the important interactions among components and external systems.
 
 Focus on dependencies that matter architecturally.
@@ -131,42 +152,49 @@ For each important interaction, consider:
 - failure behavior;
 - trust boundaries;
 - security implications; and
-- whether a formal contract is required.
+- whether a formal interface contract is required.
 
 Detailed contracts belong in:
 
 /docs/architecture/api-contracts.md
+
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM WITH YOUR ACTUAL INTERACTIONS.
 -->
 
 | Source | Target | Interaction | Interface / Protocol | Notes |
 |---|---|---|---|---|
 | Web Client | Application Service | Submit and retrieve workflow requests | HTTPS / JSON | Authenticated requests |
-| Application Service | Identity Provider | Validate user identity | Provider-defined protocol | External dependency |
+| Application Service | Identity Provider | Obtain trusted user identity | Provider-defined protocol | External dependency |
 | Application Service | Persistence Layer | Store and retrieve workflow state | Internal interface | Application-controlled boundary |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with actual system interfaces
-and dependencies.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 -->
 
 ## Data and State Ownership
 
 <!--
+TEAM CONTENT REQUIRED WHEN DATA OR STATE OWNERSHIP IS ARCHITECTURALLY SIGNIFICANT
+
 Identify where important system state is authoritative.
 
-This does not need to become a complete database design.
+This is not intended to become a complete database design.
 
 Consider:
 
-- Which component owns workflow state?
+- Which component owns important state?
 - Where is authoritative persistent data stored?
 - Which data is derived or cached?
 - Which external systems remain authoritative for information they provide?
-- Are multiple components allowed to modify the same state?
+- Which components are permitted to modify important state?
 - What consistency assumptions exist?
 
-Delete this section if data/state ownership is genuinely not architecturally
-significant to your system.
+THE ROWS BELOW ARE SAMPLE DATA.
+DELETE AND REPLACE THEM WITH YOUR ACTUAL STATE OWNERSHIP.
+
+If this section is genuinely not useful for your architecture, the team may
+remove the section after making that decision.
 -->
 
 | Data / State | Authoritative Owner | Persistence | Notes |
@@ -175,35 +203,40 @@ significant to your system.
 | User identity | Identity Provider | External | Application consumes identity but does not own it |
 
 <!--
-DELETE THE SAMPLE ROWS ABOVE and replace them with actual system state.
+DELETE AND REPLACE ALL SAMPLE ROWS ABOVE.
 -->
 
 ## Constraints and Assumptions
 
 <!--
-Record architectural constraints and assumptions that materially influence
-the design.
+TEAM CONTENT REQUIRED
+
+Record constraints and assumptions that materially influence the architecture.
 
 A CONSTRAINT is something the architecture must operate within.
 
-Examples:
+Examples may include:
 
 - required deployment platform;
 - required programming language;
 - required external service;
 - security requirement;
-- institutional technology limitation;
+- institutional technology limitation; or
 - compatibility requirement.
 
 An ASSUMPTION is something currently being treated as true without sufficient
 confirmation.
 
-Do not duplicate detailed assumption tracking here. Reference the authoritative
-entry in:
+Do not recreate detailed assumption tracking here.
+
+Reference authoritative assumptions in:
 
 /docs/requirements/assumptions-open-questions.md
 
-Architectural risks should similarly link to the project's risk documentation.
+Similarly, reference risks and decision records rather than duplicating them.
+
+THE ROW BELOW IS SAMPLE DATA.
+DELETE AND REPLACE IT WITH ACTUAL PROJECT EVIDENCE.
 -->
 
 | ID / Reference | Type | Description | Architectural Impact |
@@ -211,33 +244,170 @@ Architectural risks should similarly link to the project's risk documentation.
 | ASM-001 | Assumption | Users authenticate through an institution-supported identity provider. | Architecture relies on external authentication rather than local credential storage. |
 
 <!--
-DELETE THE SAMPLE ROW ABOVE and replace it with actual constraints and
-referenced assumptions.
+DELETE AND REPLACE THE SAMPLE ROW ABOVE.
 -->
 
 ## Architecture Diagram
 
 <!--
-Replace this comment with your current architecture diagram.
+TEAM CONTENT REQUIRED
 
-A diagram should help a reviewer understand structure that is difficult to
-communicate through prose alone.
+Replace this comment with your team's current architecture diagram.
 
-Mermaid is appropriate when useful because GitHub renders Mermaid diagrams.
+A diagram should make important system structure easier to understand than
+prose alone.
 
-EXAMPLE ONLY:
+Mermaid is acceptable because GitHub renders Mermaid diagrams.
 
-```mermaid
-flowchart LR
-    User[User]
-    Web[Web Client]
-    App[Application Service]
-    Identity[Identity Provider]
-    Data[Persistence Layer]
-    DB[(Database)]
+EXAMPLE ONLY — DO NOT RETAIN AS YOUR PROJECT ARCHITECTURE:
 
-    User --> Web
-    Web --> App
-    App --> Identity
-    App --> Data
-    Data --> DB
+    ```mermaid
+    flowchart LR
+        User[User]
+        Web[Web Client]
+        App[Application Service]
+        Identity[Identity Provider]
+        Data[Persistence Layer]
+        DB[(Database)]
+
+        User --> Web
+        Web --> App
+        App --> Identity
+        App --> Data
+        Data --> DB
+    ```
+
+Your actual diagram should:
+
+- use the same component names as the architecture documentation;
+- show important system and external boundaries;
+- show meaningful interaction or dependency directions;
+- remain understandable without requiring source-code knowledge; and
+- remain current when the architecture changes.
+
+DELETE THIS ENTIRE COMMENT and replace it with your actual diagram.
+-->
+
+## Architectural Qualities and Tradeoffs
+
+<!--
+TEAM CONTENT REQUIRED
+
+Identify qualities that materially influence your architecture.
+
+Examples might include:
+
+- maintainability;
+- reliability;
+- security;
+- testability;
+- scalability;
+- performance;
+- usability;
+- recoverability; or
+- deployability.
+
+Do not create a generic list of desirable qualities.
+
+Document qualities that actually influenced architectural choices and explain
+the consequences or tradeoffs involved.
+
+THE ROW BELOW IS SAMPLE DATA.
+DELETE AND REPLACE IT WITH ACTUAL PROJECT EVIDENCE.
+-->
+
+| Quality / Concern | Architectural Response | Tradeoff / Consequence |
+|---|---|---|
+| Maintainability | Separate workflow logic from presentation and persistence responsibilities. | Adds explicit interfaces and some structural overhead. |
+
+<!--
+DELETE AND REPLACE THE SAMPLE ROW ABOVE.
+-->
+
+## Key Architectural Decisions
+
+<!--
+TEAM CONTENT REQUIRED
+
+Summarize significant architectural decisions here without duplicating the
+complete decision records.
+
+Reference the authoritative ADR or other decision artifact.
+
+A decision belongs here when it materially shapes the architecture.
+
+If a decision has not yet been made, reference the appropriate open question
+rather than pretending the architecture is settled.
+
+THE ROW BELOW IS SAMPLE DATA.
+DELETE AND REPLACE IT WITH ACTUAL PROJECT DECISIONS.
+-->
+
+| Decision | Summary | Evidence |
+|---|---|---|
+| ADR-001 | Use a modular application structure for the initial system. | `/docs/decisions/ADR-001.md` |
+
+<!--
+DELETE AND REPLACE THE SAMPLE ROW ABOVE.
+-->
+
+## Architecture Evolution
+
+<!--
+Architecture may evolve as:
+
+- requirements become clearer;
+- implementation produces evidence;
+- assumptions are validated or invalidated;
+- risks are discovered; and
+- engineering decisions change.
+
+When the architecture changes materially:
+
+1. update this file;
+2. update affected diagrams;
+3. update component-responsibilities.md;
+4. update api-contracts.md;
+5. record significant decisions;
+6. review affected requirements and acceptance criteria;
+7. review affected risks; and
+8. update relevant tests and operational evidence.
+
+Use the table below only for meaningful architectural changes.
+
+A blank table is intentional at project start.
+-->
+
+| Effective Gate | Change | Reason | Related Evidence |
+|---|---|---|---|
+|  |  |  |  |
+
+## Expectations
+
+- Describe the actual architecture rather than an aspirational architecture.
+- Use consistent component and interface names across engineering artifacts.
+- Keep system context, structure, responsibilities, and dependencies current.
+- Maintain a useful architecture diagram.
+- Separate requirements from architecture and architecture from low-level implementation detail.
+- Reference assumptions, risks, decisions, and contracts rather than unnecessarily duplicating them.
+- Make significant architectural tradeoffs explicit.
+- Record uncertainty rather than manufacturing architectural certainty.
+- Update related engineering evidence when the architecture materially changes.
+
+<!--
+FINAL STARTER KIT CHECK — DELETE BEFORE PHASE-GATE SUBMISSION
+
+Before submission:
+
+1. Replace all sample project data.
+2. Replace all placeholder sections with actual team content.
+3. Confirm component names agree with component-responsibilities.md.
+4. Confirm important interfaces agree with api-contracts.md.
+5. Confirm decision and assumption references are valid.
+6. Confirm the architecture diagram represents the current system.
+7. Review the document for stale or contradictory information.
+8. Remove all instructional HTML comments.
+
+A reviewer should be able to understand the major system structure and the
+engineering reasoning behind it without reading the source code.
+-->
